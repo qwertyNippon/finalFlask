@@ -35,12 +35,13 @@ class Anime():
 
     def get_deets(self):
         data = self.request()
+        print(data)
         self.id = data["data"]["mal_id"]
         self.new_url = data["data"]["url"]
         self.img = data["data"]["images"]["jpg"]["image_url"]
         self.trail = data["data"]["trailer"]["url"]
-        self.engT = data["data"]["titles"][2]
-        self.japT = data["data"]["titles"][1]
+        self.engT = data["data"]["title_english"]
+        self.japT = data["data"]["title_japanese"]
         self.rating = data["data"]["rating"]
         self.syn = data["data"]["synopsis"]
         
@@ -50,8 +51,8 @@ class Anime():
         d["new_url"] = data["data"]["url"]
         d["img"] = data["data"]["images"]["jpg"]["image_url"]
         d["trail"] = data["data"]["trailer"]["url"]
-        d["engT"] = data["data"]["titles"][2]
-        d["japT"] = data["data"]["titles"][1]
+        d["engT"] = data["data"]["title_english"]
+        d["japT"] = data["data"]["title_japanese"]
         d["rating"] = data["data"]["rating"]
         d["syn"] = data["data"]["synopsis"]
         return d

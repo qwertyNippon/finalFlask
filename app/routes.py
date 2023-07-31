@@ -66,7 +66,7 @@ def get_current_user():
 def qwertyadd_product():
     k = 0
     j = 0
-    for i in range(50,55):
+    for i in range(101,150):
     ### increment count of chosen product in cart
         anime = Anime(i)
         data = anime.request()
