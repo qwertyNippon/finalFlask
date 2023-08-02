@@ -5,9 +5,11 @@ from .models import User, Anime_models
 from flask_login import current_user, login_required, logout_user
 from flask_bcrypt import Bcrypt
 from flask_session import Session
+from flask_cors import CORS
 
 bcrypt = Bcrypt(app)
 server_session = Session(app)
+cors = CORS(app, supports_credentials=True)
 
 # @app.route('/')
 # def land():
@@ -113,7 +115,6 @@ def qwertyadd_user():
         "id" : new_user.id,
         "email" : new_user.email
     })
-
 @app.route('/Login', methods=["POST"])
 def qwertylogin_user():
     email = request.json['email']
@@ -134,6 +135,10 @@ def qwertylogin_user():
         "email" : user.email
     })
 
+@app.route('/Logout', methods=["POST"])
+def logout_user():
+    session.pop("user_id")
+    return '200'
 
 # @app.route('/WatchList')
 # # @login_required
