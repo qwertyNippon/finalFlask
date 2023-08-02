@@ -111,6 +111,8 @@ def qwertyadd_user():
     new_user = User(email=email, password=hashed_password)
     new_user.save_me
 
+    session["user_id"] = new_user.id
+
     return jsonify({
         "id" : new_user.id,
         "email" : new_user.email
