@@ -213,6 +213,7 @@ class Anime_models(db.Model):
     def delete_me(self):
         db.session.delete(self)
         db.session.commit()
+
         
     def to_dict(self):
         d = {}
@@ -239,7 +240,7 @@ def get_uuid():
     return uuid4().hex
 
 class User(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True, unique=True, default=get_uuid)
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), nullable=False, unique=True)
     email = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.Text, nullable=False)
@@ -259,6 +260,13 @@ class User(db.Model, UserMixin):
     def delete_me(self):
         db.session.delete(self)
         db.session.commit()
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'email': self.email,
+            'username' : self.username
+        }
 
 
 # class Watch_list(db.Model):
