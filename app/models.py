@@ -203,6 +203,11 @@ class Anime_models(db.Model):
         self.rating = rating
         self.syn = syn
 
+    def add_watch(self, user):
+        self.watching.append(user)
+        db.session.commit()
+
+
     def save_me(self):
         db.session.add(self)
         db.session.commit()

@@ -83,9 +83,10 @@ def qwertyadd_product():
             print(j, 'this is how many anime')
     return 'yes, yes, yes'
 
-# @app.route('/Signup', methods=["POST"])
-# @login_required
-# def qwertyadd_user():
+@app.route('/explore', methods=["POST"])
+@login_required
+def qwertyadd_user():
+    return ""
 
 
 
@@ -178,6 +179,11 @@ def qwertysignup():
     "status" : status,
     "Message" : " sign up complete"
 }
+
+@app.route('/addToWatchList', methods=["POST"])
+def addWatchList():
+    data = request.get_json()
+    print(data)
 
 
 

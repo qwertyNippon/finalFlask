@@ -12,7 +12,7 @@ def save_me(self):
     db.session.add(self)
     db.session.commit()
 
-@auth.route('/Signup', methods=['GET', 'POST'])
+@auth.route('/signup', methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
     print(request.method)
@@ -35,7 +35,7 @@ def register():
 
     return 'ok'
 
-@auth.route('/Login', methods=["POST"])
+@auth.route('/login', methods=["POST"])
 def qwertylogin_user():
     data = request.json
     print(data)
