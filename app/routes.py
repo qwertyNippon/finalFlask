@@ -131,7 +131,7 @@ def get_current_user():
 
 @app.route('/login', methods=["POST"])
 def qwertylogin_user():
-    data = request.json
+    data = request.get_json()
     print(data)
     u = data['username']
     user = User.query.filter_by(username=u).first()
@@ -139,11 +139,8 @@ def qwertylogin_user():
         if check_password_hash(user.password, data['pass']):
             return {
                 'status':'ok',
-                'message' : 'Logged in!',
-                'data':{
-                    'user': user.to_dict(),
-                    'token': ''
-                }  
+                'message' : 'authenticated',
+                'data': user.to_dict()
             }
         else:
             return {
@@ -152,13 +149,13 @@ def qwertylogin_user():
                 }, 400
     return {
         'status': 'NOT ok',
-        'message': "username no existe",
+        'message': "username not found",
         'error': 'no username match'
-    }, 418
+    }
 
 @app.route('/signup', methods=["POST"])
 def qwertysignup():
-    data=request.json
+    data=request.get_json()
     print(data)
     u = data['username']
     email = data['email']

@@ -35,32 +35,32 @@ def register():
 
     return 'ok'
 
-@auth.route('/login', methods=["POST"])
-def qwertylogin_user():
-    data = request.json
-    print(data)
-    u = data['username']
-    user = User.query.filter_by(username=u).first()
-    if user:
-        if check_password_hash(user.password, data['pass']):
-            return {
-                'status':'ok',
-                'message' : 'Logged in!',
-                'data':{
-                    'user': user.to_dict(),
-                    'token': ''
-                }  
-            }
-        else:
-            return {
-                'status' : 'NOT ok',
-                'message': 'Wrong Password',
-                }, 400
-    return {
-        'status': 'NOT ok',
-        'message': "username no existe",
-        'error': 'no username match'
-    }, 418
+# @auth.route('/login', methods=["POST"])
+# def qwertylogin_user():
+#     data = request.json
+#     print(data)
+#     u = data['username']
+#     user = User.query.filter_by(username=u).first()
+#     if user:
+#         if check_password_hash(user.password, data['pass']):
+#             return {
+#                 'status':'ok',
+#                 'message' : 'Logged in!',
+#                 'data':{
+#                     'user': user.to_dict(),
+#                     'token': ''
+#                 }  
+#             }
+#         else:
+#             return {
+#                 'status' : 'NOT ok',
+#                 'message': 'Wrong Password',
+#                 }, 400
+#     return {
+#         'status': 'NOT ok',
+#         'message': "username no existe",
+#         'error': 'no username match'
+#     }, 418
 
 # @auth.route('/login', methods=['GET', 'POST'])
 # def login():
