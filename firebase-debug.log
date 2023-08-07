@@ -1,0 +1,130 @@
+[debug] [2023-08-07T03:33:15.863Z] ----------------------------------------------------------------------
+[debug] [2023-08-07T03:33:15.864Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\orlan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-08-07T03:33:15.865Z] CLI Version:   12.4.7
+[debug] [2023-08-07T03:33:15.865Z] Platform:      win32
+[debug] [2023-08-07T03:33:15.865Z] Node Version:  v18.16.1
+[debug] [2023-08-07T03:33:15.865Z] Time:          Sun Aug 06 2023 23:33:15 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-08-07T03:33:15.866Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-07T03:33:15.870Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-07T03:33:15.871Z] > authorizing via signed-in user (orlandohenry100@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\orlan\OneDrive\Documents\codingTemple\Final\Flask
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-08-07T03:34:53.817Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-08-07T03:34:53.817Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"final-backend-data","name":"final-backend-data"}
+[debug] [2023-08-07T03:34:54.238Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-08-07T03:34:54.238Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5278652687411561204"}
+[debug] [2023-08-07T03:34:54.239Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 [none]
+[debug] [2023-08-07T03:34:54.788Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 200
+[debug] [2023-08-07T03:34:54.789Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 {"name":"operations/cp.5278652687411561204"}
+[debug] [2023-08-07T03:34:55.300Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-08-07T03:34:55.301Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 [none]
+[debug] [2023-08-07T03:34:55.930Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 200
+[debug] [2023-08-07T03:34:55.930Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 {"name":"operations/cp.5278652687411561204"}
+[debug] [2023-08-07T03:34:56.931Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-08-07T03:34:56.933Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 [none]
+[debug] [2023-08-07T03:34:57.330Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 200
+[debug] [2023-08-07T03:34:57.331Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 {"name":"operations/cp.5278652687411561204","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2023-08-07T03:34:59.346Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-08-07T03:34:59.347Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 [none]
+[debug] [2023-08-07T03:34:59.704Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 200
+[debug] [2023-08-07T03:34:59.704Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5278652687411561204 {"name":"operations/cp.5278652687411561204","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"750694026511","projectId":"final-backend-data","lifecycleState":"ACTIVE","name":"final-backend-data","createTime":"2023-08-07T03:34:56.532Z"}}
+[debug] [2023-08-07T03:34:59.706Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/final-backend-data:addFirebase [none]
+[debug] [2023-08-07T03:35:02.366Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/final-backend-data:addFirebase 200
+[debug] [2023-08-07T03:35:02.366Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/final-backend-data:addFirebase {"name":"operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz"}
+[debug] [2023-08-07T03:35:02.366Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz [none]
+[debug] [2023-08-07T03:35:02.873Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz 200
+[debug] [2023-08-07T03:35:02.874Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz {"name":"operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz"}
+[debug] [2023-08-07T03:35:03.376Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-07T03:35:03.377Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz [none]
+[debug] [2023-08-07T03:35:03.691Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz 200
+[debug] [2023-08-07T03:35:03.691Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz {"name":"operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz"}
+[debug] [2023-08-07T03:35:04.700Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-07T03:35:04.701Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz [none]
+[debug] [2023-08-07T03:35:05.190Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz 200
+[debug] [2023-08-07T03:35:05.190Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz {"name":"operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz"}
+[debug] [2023-08-07T03:35:07.192Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-07T03:35:07.193Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz [none]
+[debug] [2023-08-07T03:35:07.887Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz 200
+[debug] [2023-08-07T03:35:07.887Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz {"name":"operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz"}
+[debug] [2023-08-07T03:35:11.897Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-07T03:35:11.899Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz [none]
+[debug] [2023-08-07T03:35:12.263Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz 200
+[debug] [2023-08-07T03:35:12.263Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz {"name":"operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz"}
+[debug] [2023-08-07T03:35:20.263Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-08-07T03:35:20.264Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz [none]
+[debug] [2023-08-07T03:35:20.664Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz 200
+[debug] [2023-08-07T03:35:20.664Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz {"name":"operations/workflows/MWNkZWI0NzUtNzFhNy00Yjg2LWIyNmMtZjQ0NmE3YjZhODgz","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"final-backend-data","projectNumber":"750694026511","displayName":"final-backend-data","name":"projects/final-backend-data","resources":{"hostingSite":"final-backend-data"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: final-backend-data
+[info]    - Project Name: final-backend-data
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/final-backend-data/overview
+[info] i  Using project final-backend-data (final-backend-data) 
+[info] 
+=== Functions Setup
+[debug] [2023-08-07T03:35:20.678Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-07T03:35:20.679Z] > authorizing via signed-in user (orlandohenry100@gmail.com)
+[debug] [2023-08-07T03:35:20.679Z] [iam] checking project final-backend-data for permissions ["firebase.projects.get"]
+[debug] [2023-08-07T03:35:20.679Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-backend-data:testIamPermissions [none]
+[debug] [2023-08-07T03:35:20.679Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-backend-data:testIamPermissions x-goog-quota-user=projects/final-backend-data
+[debug] [2023-08-07T03:35:20.679Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-backend-data:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-08-07T03:35:21.217Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-backend-data:testIamPermissions 200
+[debug] [2023-08-07T03:35:21.217Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/final-backend-data:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-08-07T03:35:21.219Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-08-07T03:35:21.219Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/final-backend-data
+[debug] [2023-08-07T03:35:21.220Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-08-07T03:35:21.220Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/final-backend-data
+[debug] [2023-08-07T03:35:22.140Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/runtimeconfig.googleapis.com 200
+[debug] [2023-08-07T03:35:22.141Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-08-07T03:35:22.143Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com 200
+[debug] [2023-08-07T03:35:22.143Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2023-08-07T03:35:22.143Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2023-08-07T03:35:22.144Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/final-backend-data
+[debug] [2023-08-07T03:35:23.574Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2023-08-07T03:35:23.574Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2023-08-07T03:35:33.588Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-08-07T03:35:33.588Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/final-backend-data
+[debug] [2023-08-07T03:35:34.442Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com 200
+[debug] [2023-08-07T03:35:34.442Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/final-backend-data/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/requirements.txt 
+[info] +  Wrote functions/.gitignore 
+[info] +  Wrote functions/main.py 
+[debug] [2023-08-07T03:35:59.782Z] Running command with virtualenv: command="C:\Users\orlan\OneDrive\Documents\codingTemple\Final\Flask\functions\venv\Scripts\activate.bat", args=["","&&","pip3","install","--upgrade","pip"]
+[debug] [2023-08-07T03:36:01.914Z] Error: spawn "C:\Users\orlan\OneDrive\Documents\codingTemple\Final\Flask\functions\venv\Scripts\activate.bat" ENOENT
+    at notFoundError (C:\Users\orlan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:6:26)
+    at verifyENOENT (C:\Users\orlan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:40:16)
+    at cp.emit (C:\Users\orlan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:27:25)
+    at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+[error] 
+[error] Error: An unexpected error has occurred.
